@@ -1,11 +1,19 @@
 package befaster.solutions.SUM;
 
-import befaster.runner.SolutionNotImplementedException;
-
 public class SumSolution {
 
     public int compute(int x, int y) {
-        throw new SolutionNotImplementedException();
+
+        if(x > 100 || x < 0) {
+            System.out.println("Param x not okay");
+        }
+
+        if(y > 100 || y < 0) {
+            System.out.println("Param y not okay");
+        }
+
+        return x + y;
     }
 
 }
+
