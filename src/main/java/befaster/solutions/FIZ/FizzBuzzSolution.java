@@ -79,7 +79,26 @@ public class FizzBuzzSolution {
     }
 
     private boolean hasAllSameDigits(Integer number) {
-        return number.toString().matches("^[1-9]*$");
+
+        String numberAsStr = number.toString();
+
+        if(numberAsStr.replaceAll("1", "").length() == 0) {
+            return true;
+        } else if(numberAsStr.replaceAll("2", "").length() == 0) {
+            return true;
+        } else if(numberAsStr.replaceAll("3", "").length() == 0) {
+            return true;
+        } else if(numberAsStr.replaceAll("4", "").length() == 0) {
+            return true;
+        } else if(numberAsStr.replaceAll("5", "").length() == 0) {
+            return true;
+        } else if(numberAsStr.replaceAll("6", "").length() == 0) {
+            return true;
+        } else if(numberAsStr.replaceAll("7", "").length() == 0) {
+            return true;
+        } else if(numberAsStr.replaceAll("8", "").length() == 0) {
+            return true;
+        } else return numberAsStr.replaceAll("9", "").length() == 0;
     }
 
 
@@ -104,5 +123,6 @@ public class FizzBuzzSolution {
         }
     }
 }
+
 
 
