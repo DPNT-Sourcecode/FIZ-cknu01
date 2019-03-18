@@ -39,7 +39,9 @@ public class FizSolutionTest {
         assert(fizzBuzzSolution.fizzBuzz(31).equals("fizz"));
         assert(fizzBuzzSolution.fizzBuzz(315).equals("fizz buzz"));
         assert(fizzBuzzSolution.fizzBuzz(5).equals("buzz"));
-        assert(fizzBuzzSolution.fizzBuzz(15).equals("buzz"));
+        assert(fizzBuzzSolution.fizzBuzz(60).equals("fizz buzz"));
+        assert(fizzBuzzSolution.fizzBuzz(15).equals("fizz buzz"));
     }
 }
+
 
