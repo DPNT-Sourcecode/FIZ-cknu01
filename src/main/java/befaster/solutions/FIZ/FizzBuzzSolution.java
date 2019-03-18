@@ -6,21 +6,11 @@ public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
 
-//        if(isDivisibleByNumber(number, 3) && isDivisibleByNumber(number, 5)) {
-//            return "fizz buzz";
-//        } else if (isDivisibleByNumber(number, 3)) {
-//            return "fizz";
-//        } else if (isDivisibleByNumber(number, 5)) {
-//            return "buzz";
-//        } else {
-//            return number.toString();
-//        }
-
         boolean isFizz = false;
         boolean isBuzz = false;
         boolean isDeluxe = false;
 
-        if(isDeluxe(number, 10)) {
+        if(isDeluxe2(number)) {
             isDeluxe = true;
         }
 
@@ -81,6 +71,14 @@ public class FizzBuzzSolution {
     private boolean isDeluxe(Integer number, Integer value) {
         return isBiggerThan(number, value) && hasAllSameDigits(number);
     }
+    private boolean isDeluxe2(Integer number) {
+
+        return
+        (containsANumber(number, 3) && isDivisibleByNumber(number, 3))
+                ||
+        (containsANumber(number, 5) && isDivisibleByNumber(number, 5));
+    }
+
 
     private boolean isBiggerThan(Integer number, Integer value) {
         return number > value;
@@ -113,7 +111,6 @@ public class FizzBuzzSolution {
         } else return numberAsStr.replaceAll("9", "").length() == 0;
     }
 
-
     enum FIZZ_BUZZ_DELUXE {
 
         FIZZ("fizz"),
@@ -136,4 +133,5 @@ public class FizzBuzzSolution {
         }
     }
 }
+
 
