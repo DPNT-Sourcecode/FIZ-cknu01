@@ -40,23 +40,31 @@ public class FizzBuzzSolution {
             isBuzz = true;
         }
 
+        String result;
+
         if(isBuzz && isFizz && isDeluxe) {
-            return FIZZ_BUZZ_DELUXE.getValue();
+            result = FIZZ_BUZZ_DELUXE.getValue();
         }else if(isBuzz && isFizz) {
-            return FIZZ_BUZZ.getValue();
+            result = FIZZ_BUZZ.getValue();
         } else if(isBuzz && isDeluxe) {
-            return BUZZ_DELUXE.getValue();
+            result = BUZZ_DELUXE.getValue();
         } else if(isFizz && isDeluxe){
-            return FIZZ_DELUXE.getValue();
+            result = FIZZ_DELUXE.getValue();
         } else if (isDeluxe) {
-            return DELUXE.getValue();
+            result = DELUXE.getValue();
         } else if(isBuzz) {
-            return BUZZ.getValue();
+            result = BUZZ.getValue();
         } else if(isFizz){
-            return FIZZ.getValue();
+            result = FIZZ.getValue();
         } else {
-            return number.toString();
+            result = number.toString();
         }
+
+        if(result.contains("deluxe") && isOdd(number)) {
+            result = result.replace("deluxe", "fake deluxe");
+        }
+
+        return result;
     }
 
 
@@ -76,6 +84,10 @@ public class FizzBuzzSolution {
 
     private boolean isBiggerThan(Integer number, Integer value) {
         return number > value;
+    }
+
+    private boolean isOdd(Integer number) {
+        return (number & 1) != 0;
     }
 
     private boolean hasAllSameDigits(Integer number) {
@@ -110,7 +122,8 @@ public class FizzBuzzSolution {
         FIZZ_BUZZ("fizz buzz"),
         FIZZ_DELUXE("fizz deluxe"),
         BUZZ_DELUXE("buzz deluxe"),
-        FIZZ_BUZZ_DELUXE("fizz buzz deluxe");
+        FIZZ_BUZZ_DELUXE("fizz buzz deluxe"),
+        FAKE_DELUXE("fake deluxe");
 
         String value;
 
@@ -123,3 +136,4 @@ public class FizzBuzzSolution {
         }
     }
 }
+
