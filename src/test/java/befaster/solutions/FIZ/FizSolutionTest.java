@@ -43,5 +43,3 @@ public class FizSolutionTest {
         assert(fizzBuzzSolution.fizzBuzz(15).equals("fizz buzz"));
     }
 }
-
-
