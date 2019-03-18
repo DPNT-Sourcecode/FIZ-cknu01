@@ -42,4 +42,24 @@ public class FizSolutionTest {
         assert(fizzBuzzSolution.fizzBuzz(60).equals("fizz buzz"));
         assert(fizzBuzzSolution.fizzBuzz(15).equals("fizz buzz"));
     }
+
+    @Test
+    public void fizzBuzz3() {
+        assert(fizzBuzzSolution.fizzBuzz(1).equals("1"));
+        assert(fizzBuzzSolution.fizzBuzz(9999).equals("fizz deluxe"));
+        assert(fizzBuzzSolution.fizzBuzz(3).equals("fizz"));
+        assert(fizzBuzzSolution.fizzBuzz(31).equals("fizz"));
+        assert(fizzBuzzSolution.fizzBuzz(315).equals("fizz buzz"));
+        assert(fizzBuzzSolution.fizzBuzz(5).equals("buzz"));
+        assert(fizzBuzzSolution.fizzBuzz(60).equals("fizz buzz"));
+        assert(fizzBuzzSolution.fizzBuzz(15).equals("fizz buzz"));
+
+        // New
+        assert(fizzBuzzSolution.fizzBuzz(10).equals("buzz"));
+        assert(fizzBuzzSolution.fizzBuzz(33).equals("fizz deluxe"));
+        assert(fizzBuzzSolution.fizzBuzz(55).equals("buzz deluxe"));
+        assert(fizzBuzzSolution.fizzBuzz(555).equals("fizz buzz deluxe"));
+
+    }
 }
+
