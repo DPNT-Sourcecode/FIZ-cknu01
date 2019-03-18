@@ -79,7 +79,7 @@ public class FizzBuzzSolution {
     }
 
     private boolean hasAllSameDigits(Integer number) {
-        return number.toString().matches("^[1-9]+$");
+        return number.toString().matches("^[1-9]*$");
     }
 
 
@@ -104,4 +104,5 @@ public class FizzBuzzSolution {
         }
     }
 }
+
 
